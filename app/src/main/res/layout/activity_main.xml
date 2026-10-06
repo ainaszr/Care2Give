@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFF9F0"
+    android:paddingLeft="28dp"
+    android:paddingRight="28dp">
+
+    <!-- APP ICON -->
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/welcome_circle"
+        android:gravity="center"
+        android:text="🍱"
+        android:textSize="48sp" />
+
+    <!-- APP NAME -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Care2Give"
+        android:textColor="#5D4037"
+        android:textSize="38sp"
+        android:textStyle="bold" />
+
+    <!-- SUBTITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Community Food Rescue"
+        android:textColor="#8D6E63"
+        android:textSize="17sp" />
+
+    <!-- TAGLINE -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="Share Food. Reduce Waste. Spread Kindness."
+        android:textColor="#666666"
+        android:textSize="16sp" />
+
+    <!-- DESCRIPTION -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text="Connecting surplus food with people who need it."
+        android:textColor="#888888"
+        android:textSize="14sp" />
+
+    <!-- GET STARTED -->
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#6F9E76"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
