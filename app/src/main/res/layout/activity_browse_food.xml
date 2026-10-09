@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF9F0"
+    android:padding="20dp">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dashboard_welcome"
+        android:padding="22dp"
+        android:elevation="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🍱 Discover Food"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Find fresh food shared with love by your community."
+            android:textColor="#E8F4EB"
+            android:textSize="14sp"
+            android:lineSpacingExtra="3dp" />
+
+    </LinearLayout>
+
+    <!-- SEARCH SECTION -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Find Your Next Meal"
+        android:textColor="#356B4B"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Explore available food donations below."
+        android:textColor="#8D6E63"
+        android:textSize="13sp" />
+
+    <!-- SEARCH BAR -->
+    <EditText
+        android:id="@+id/etSearchFood"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_background"
+        android:hint="🔍 Search food by name..."
+        android:singleLine="true"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#354D3D"
+        android:textColorHint="#9A9A9A"
+        android:textSize="15sp" />
+
+    <!-- AVAILABLE FOOD HEADING -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="🌿 Available Donations"
+        android:textColor="#356B4B"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- LOADING -->
+    <ProgressBar
+        android:id="@+id/progressBarBrowse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="#477A59"
+        android:visibility="gone" />
+
+    <!-- EMPTY STATE -->
+    <TextView
+        android:id="@+id/tvEmptyBrowse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_dashboard_card"
+        android:padding="28dp"
+        android:text="🌱 No available food found."
+        android:textColor="#8D6E63"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <!-- SCROLLABLE FOOD LIST -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="14dp"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/browseFoodContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp" />
+
+    </ScrollView>
+
+    <!-- BACK BUTTON -->
+    <Button
+        android:id="@+id/btnBackBrowse"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:text="← Back to Dashboard"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#8D6E63" />
+
+</LinearLayout>

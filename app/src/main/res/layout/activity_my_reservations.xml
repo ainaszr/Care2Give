@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF9F0"
+    android:padding="20dp">
+
+    <!-- GREEN HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dashboard_welcome"
+        android:padding="24dp"
+        android:elevation="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛒 My Reservations"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Track the food you've reserved and follow its journey."
+            android:textColor="#E8F4EB"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+
+    </LinearLayout>
+
+    <!-- SECTION HEADING -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="🌿 Your Food Reservations"
+        android:textColor="#356B4B"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="All the meals you've saved are listed here."
+        android:textColor="#8D6E63"
+        android:textSize="13sp" />
+
+    <!-- LOADING INDICATOR -->
+    <ProgressBar
+        android:id="@+id/progressReservations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:indeterminateTint="#477A59"
+        android:visibility="gone" />
+
+    <!-- EMPTY STATE -->
+    <TextView
+        android:id="@+id/tvEmptyReservations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_dashboard_card"
+        android:padding="30dp"
+        android:text="🍱 No reservations yet.\n\nExplore available food and start rescuing meals!"
+        android:gravity="center"
+        android:textColor="#8D6E63"
+        android:textSize="15sp"
+        android:lineSpacingExtra="4dp"
+        android:visibility="gone" />
+
+    <!-- SCROLLABLE RESERVATION CARDS -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/reservationsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp" />
+
+    </ScrollView>
+
+    <!-- BACK BUTTON -->
+    <Button
+        android:id="@+id/btnBackReservations"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:text="← Back to Dashboard"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#8D6E63" />
+
+</LinearLayout>

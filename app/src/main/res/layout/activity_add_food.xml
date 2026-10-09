@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_welcome"
+            android:padding="24dp"
+            android:elevation="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🍱 Share a Meal"
+                android:textColor="#FFFFFF"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Your extra food can make someone's day better."
+                android:textColor="#E8F4EB"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- IMAGE SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_card"
+            android:padding="18dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📷 Food Photo"
+                android:textColor="#356B4B"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Upload a clear photo of your food."
+                android:textColor="#8D8D8D"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/ivFoodPreview"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_background"
+                android:scaleType="centerCrop"
+                android:contentDescription="Selected food image" />
+
+            <Button
+                android:id="@+id/btnChooseImage"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="14dp"
+                android:text="📷 Choose Food Image"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#8D6E63" />
+
+        </LinearLayout>
+
+        <!-- FOOD DETAILS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_card"
+            android:padding="18dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌿 Food Details"
+                android:textColor="#356B4B"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- FOOD NAME -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Food Name"
+                android:textColor="#5D4037"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etFoodName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="e.g. Fried Rice"
+                android:inputType="textCapSentences"
+                android:padding="14dp"
+                android:textColor="#354D3D"
+                android:textColorHint="#9A9A9A" />
+
+            <!-- CATEGORY -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Food Category"
+                android:textColor="#5D4037"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:padding="12dp" />
+
+            <!-- QUANTITY -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Quantity"
+                android:textColor="#5D4037"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="e.g. 5"
+                android:inputType="number"
+                android:padding="14dp"
+                android:textColor="#354D3D"
+                android:textColorHint="#9A9A9A" />
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Description"
+                android:textColor="#5D4037"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:gravity="top"
+                android:hint="Describe the food and any important details..."
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="#354D3D"
+                android:textColorHint="#9A9A9A" />
+
+        </LinearLayout>
+
+        <!-- PICKUP DETAILS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_card"
+            android:padding="18dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📍 Pickup Information"
+                android:textColor="#356B4B"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- PICKUP LOCATION -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Pickup Location"
+                android:textColor="#5D4037"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPickupLocation"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="e.g. UPTM Main Entrance"
+                android:inputType="textCapWords"
+                android:padding="14dp"
+                android:textColor="#354D3D"
+                android:textColorHint="#9A9A9A" />
+
+            <!-- EXPIRY DATE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Expiry Date"
+                android:textColor="#5D4037"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_background"
+                android:hint="📅 Select expiry date"
+                android:focusable="false"
+                android:clickable="true"
+                android:padding="14dp"
+                android:textColor="#354D3D"
+                android:textColorHint="#9A9A9A" />
+
+        </LinearLayout>
+
+        <!-- DONATION MESSAGE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_badge"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💚 Thank You for Sharing!"
+                android:textColor="#356B4B"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="By donating your extra food, you're helping reduce food waste and support your community."
+                android:textColor="#607D68"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- BUTTONS -->
+        <Button
+            android:id="@+id/btnSubmitFood"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:text="Submit Food Donation"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#477A59" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:text="Back to Dashboard"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#8D6E63" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Care2Give • Share Food, Spread Hope"
+            android:textColor="#A1A9A1"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

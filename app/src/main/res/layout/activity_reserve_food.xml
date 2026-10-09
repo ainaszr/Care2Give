@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9F0"
+    android:fillViewport="true"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_welcome"
+            android:padding="24dp"
+            android:elevation="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🍱 Reserve Food"
+                android:textColor="#FFFFFF"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="One step closer to saving food and spreading kindness."
+                android:textColor="#E8F4EB"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- FOOD PREVIEW CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_card"
+            android:elevation="2dp">
+
+            <!-- FOOD IMAGE -->
+            <ImageView
+                android:id="@+id/ivReserveFood"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="#E8EDE5"
+                android:contentDescription="Food image"
+                android:scaleType="centerCrop" />
+
+            <!-- FOOD INFORMATION -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvReserveFoodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Food Name"
+                    android:textColor="#356B4B"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <!-- STATUS -->
+                <TextView
+                    android:id="@+id/tvReserveStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_dashboard_badge"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:text="● Available"
+                    android:textColor="#356B4B"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- DIVIDER -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#E8EDE5" />
+
+                <!-- CATEGORY -->
+                <TextView
+                    android:id="@+id/tvReserveCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="🍽️ Category:"
+                    android:textColor="#5D4037"
+                    android:textSize="15sp" />
+
+                <!-- QUANTITY -->
+                <TextView
+                    android:id="@+id/tvReserveQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="📦 Quantity:"
+                    android:textColor="#5D4037"
+                    android:textSize="15sp" />
+
+                <!-- LOCATION -->
+                <TextView
+                    android:id="@+id/tvReserveLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="📍 Pickup Location:"
+                    android:textColor="#5D4037"
+                    android:textSize="15sp" />
+
+                <!-- EXPIRY -->
+                <TextView
+                    android:id="@+id/tvReserveExpiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="📅 Expiry Date:"
+                    android:textColor="#5D4037"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- RESERVATION INFORMATION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_dashboard_badge"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💚 Before You Reserve"
+                android:textColor="#356B4B"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Please review the food details carefully. Once confirmed, your reservation will be recorded and a volunteer can arrange the food pickup."
+                android:textColor="#607D68"
+                android:textSize="14sp"
+                android:lineSpacingExtra="5dp" />
+
+        </LinearLayout>
+
+        <!-- LOADING -->
+        <ProgressBar
+            android:id="@+id/progressReserve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:indeterminateTint="#477A59"
+            android:visibility="gone" />
+
+        <!-- CONFIRM BUTTON -->
+        <Button
+            android:id="@+id/btnConfirmReserve"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="26dp"
+            android:backgroundTint="#477A59"
+            android:text="✓ Confirm Reservation"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- CANCEL BUTTON -->
+        <Button
+            android:id="@+id/btnCancelReserve"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#8D6E63"
+            android:text="← Back to Browse Food"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <!-- FOOTER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="Care2Give • Share Food, Spread Hope"
+            android:textColor="#A1A9A1"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>
